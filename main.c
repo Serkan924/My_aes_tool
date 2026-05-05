@@ -3,7 +3,7 @@
 #include <string.h>
 #include "crypto.h"
 
-// четене файл
+
 unsigned char* read_file(const char *filename, long *size) {
     FILE *f = fopen(filename, "rb");
     if (!f) return NULL;
@@ -19,7 +19,7 @@ unsigned char* read_file(const char *filename, long *size) {
     return buffer;
 }
 
-// запис файл
+
 void write_file(const char *filename, unsigned char *data, int size) {
     FILE *f = fopen(filename, "wb");
     fwrite(data, 1, size, f);
